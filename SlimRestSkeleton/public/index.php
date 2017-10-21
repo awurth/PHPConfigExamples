@@ -15,7 +15,7 @@ $config = [
 $app = new App($config);
 $container = $app->getContainer();
 
-$loader = new ConfigurationLoader($config);
+$loader = new ConfigurationLoader($config, __DIR__ . '/../var/cache/prod/config.php');
 
 $container['config'] = $loader->load(__DIR__ . '/../app/config/config.yml');
 

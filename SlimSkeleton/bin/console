@@ -12,10 +12,10 @@ use Symfony\Component\Console\Application;
 
 $config = [
     'env' => 'dev',
-    'root_dir' => dirname(__DIR__, 2)
+    'root_dir' => dirname(__DIR__)
 ];
 
-$loader = new ConfigurationLoader($config);
+$loader = new ConfigurationLoader($config, __DIR__ . '/../var/cache/dev/config.php', true);
 
 $config['settings'] = ['displayErrorDetails' => true];
 

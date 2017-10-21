@@ -22,7 +22,7 @@ $config = [
     'root_dir' => dirname(__DIR__, 2)
 ];
 
-$loader = new ConfigurationLoader($config);
+$loader = new ConfigurationLoader($config, __DIR__ . '/../../var/cache/dev/config.php', true);
 
 $config['settings'] = ['displayErrorDetails' => true];
 
