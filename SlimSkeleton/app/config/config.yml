@@ -1,0 +1,16 @@
+imports:
+    - 'parameters.yml'
+    - 'sentinel.yml'
+
+twig:
+    path:
+        - '%root_dir%/src/Admin/Resources/views'
+        - '%root_dir%/src/App/Resources/views'
+        - '%root_dir%/src/Security/Resources/views'
+    options:
+        cache: '%root_dir%/var/cache/%env%/twig'
+
+monolog:
+    name: app
+    path: '%root_dir%/var/logs/%env%.log'
+    level: !php/const:Monolog\Logger::ERROR

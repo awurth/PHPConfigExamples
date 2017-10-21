@@ -1,0 +1,13 @@
+imports:
+    - 'config.yml'
+
+assets:
+    base_path: ..
+
+twig:
+    options:
+        debug: true
+        auto_reload: true
+
+monolog:
+    level: !php/const:Monolog\Logger::DEBUG

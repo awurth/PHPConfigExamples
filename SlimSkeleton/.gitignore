@@ -1,0 +1,12 @@
+vendor/
+node_modules/
+public/assets/lib/
+app/config/parameters.yml
+var/cache/*
+!var/cache/.gitkeep
+var/logs/*
+!var/logs/.gitkeep
+public/assets/css/*
+!public/assets/css/.gitkeep
+public/assets/js/*
+!public/assets/js/.gitkeep
