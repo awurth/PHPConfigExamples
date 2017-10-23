@@ -22,14 +22,14 @@ $config = [
     'root_dir' => dirname(__DIR__, 2)
 ];
 
-$loader = new ConfigurationLoader($config, __DIR__ . '/../../var/cache/dev/config.php', true);
+$loader = new ConfigurationLoader([], $config);
 
 $config['settings'] = ['displayErrorDetails' => true];
 
 $app = new App($config);
 $container = $app->getContainer();
 
-$container['config'] = $loader->load(__DIR__ . '/../../app/config/config.dev.yml');
+$container['config'] = $loader->load(__DIR__ . '/../../app/config/config.dev.yml', __DIR__ . '/../../var/cache/dev/config.php', true);
 
 require __DIR__ . '/../../app/dependencies.php';
 

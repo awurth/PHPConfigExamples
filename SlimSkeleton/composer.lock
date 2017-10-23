@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4659dd1c98764e525646fe542c238047",
+    "content-hash": "d6722dd007bab7e2235badd1fca972fa",
     "packages": [
         {
             "name": "awurth/config",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/awurth/php-config.git",
-                "reference": "5303d6854130edb099bce0464d024fdae15b4d33"
+                "reference": "af76a1e0ae79fcb8cc59d40a23f028a5f550ca2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awurth/php-config/zipball/5303d6854130edb099bce0464d024fdae15b4d33",
-                "reference": "5303d6854130edb099bce0464d024fdae15b4d33",
+                "url": "https://api.github.com/repos/awurth/php-config/zipball/af76a1e0ae79fcb8cc59d40a23f028a5f550ca2b",
+                "reference": "af76a1e0ae79fcb8cc59d40a23f028a5f550ca2b",
                 "shasum": ""
             },
             "require": {
@@ -47,7 +47,7 @@
                 }
             ],
             "description": "A configuration loader for PHP",
-            "time": "2017-10-20T14:32:15+00:00"
+            "time": "2017-10-22T21:50:44+00:00"
         },
         {
             "name": "awurth/slim-validation",

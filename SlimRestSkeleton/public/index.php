@@ -15,9 +15,9 @@ $config = [
 $app = new App($config);
 $container = $app->getContainer();
 
-$loader = new ConfigurationLoader($config, __DIR__ . '/../var/cache/prod/config.php');
+$loader = new ConfigurationLoader([], $config);
 
-$container['config'] = $loader->load(__DIR__ . '/../app/config/config.yml');
+$container['config'] = $loader->load(__DIR__ . '/../app/config/config.yml', __DIR__ . '/../var/cache/prod/config.php');
 
 require __DIR__ . '/../app/dependencies.php';
 
