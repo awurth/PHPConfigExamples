@@ -7,17 +7,16 @@ session_start();
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$config = [
-    'env' => 'prod',
+$loader = new ConfigurationLoader(__DIR__ . '/../var/cache/prod/config.php');
+$loader->setParameters([
+    'env'      => 'prod',
     'root_dir' => dirname(__DIR__)
-];
+]);
 
-$app = new App($config);
+$app = new App($loader->getParameters());
 $container = $app->getContainer();
 
-$loader = new ConfigurationLoader([], $config);
-
-$container['config'] = $loader->load(__DIR__ . '/../app/config/config.yml', __DIR__ . '/../var/cache/prod/config.php');
+$container['config'] = $loader->load(__DIR__ . '/../app/config/config.yml');
 
 require __DIR__ . '/../app/dependencies.php';
 

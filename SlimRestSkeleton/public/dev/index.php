@@ -17,19 +17,22 @@ session_start();
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-$config = [
+$app = new App([
     'env' => 'dev',
-    'root_dir' => dirname(__DIR__, 2)
-];
-
-$loader = new ConfigurationLoader([], $config);
-
-$config['settings'] = ['displayErrorDetails' => true];
-
-$app = new App($config);
+    'root_dir' => dirname(__DIR__, 2),
+    'settings' => [
+        'displayErrorDetails' => true
+    ]
+]);
 $container = $app->getContainer();
 
-$container['config'] = $loader->load(__DIR__ . '/../../app/config/config.dev.yml', __DIR__ . '/../../var/cache/dev/config.php', true);
+$loader = new ConfigurationLoader(__DIR__ . '/../../var/cache/dev/config.php', true);
+$loader->setParameters([
+    'env'      => $container['env'],
+    'root_dir' => $container['root_dir']
+]);
+
+$container['config'] = $loader->load(__DIR__ . '/../../app/config/config.dev.yml');
 
 require __DIR__ . '/../../app/dependencies.php';
 

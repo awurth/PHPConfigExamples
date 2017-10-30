@@ -25,7 +25,7 @@
     },
     "require": {
         "php": "^7.0",
-        "awurth/config": "^0.2.0",
+        "awurth/config": "^0.3.0",
         "awurth/slim-validation": "^3.0",
         "cartalyst/sentinel": "^2.0",
         "illuminate/database": "^5.4",
